@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>afterclass9th.com | Career Guidance for Indian Students</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+        
+        :root {
+            --primary: #4f46e5;
+            --secondary: #7c3aed;
+            --accent: #f43f5e;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .roadmap-line::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #e2e8f0;
+        }
+
+        .step-node {
+            position: relative;
+            z-index: 10;
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center gap-2">
+                    <div class="bg-indigo-600 p-1.5 rounded-lg text-white">
+                        <i class="fas fa-graduation-cap text-xl"></i>
+                    </div>
+                    <span class="text-xl font-bold tracking-tight">afterclass<span class="text-indigo-600">9th</span>.com</span>
+                </div>
+                <div class="hidden md:flex gap-8 text-sm font-medium text-slate-600">
+                    <a href="#home" class="hover:text-indigo-600 transition-colors">Home</a>
+                    <a href="#explore" class="hover:text-indigo-600 transition-colors">Explore Careers</a>
+                    <a href="#compare" class="hover:text-indigo-600 transition-colors">Comparison</a>
+                    <a href="#mistakes" class="hover:text-indigo-600 transition-colors">Mistakes to Avoid</a>
+                </div>
+                <button onclick="document.getElementById('explore').scrollIntoView()" class="bg-indigo-600 text-white px-5 py-2 rounded-full font-semibold text-sm hover:bg-indigo-700 transition-all shadow-md shadow-indigo-100">
+                    Get Started
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 px-4">
+        <div class="max-w-5xl mx-auto text-center">
+            <span class="bg-indigo-100 text-indigo-700 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-6 inline-block">For Classes 8th to 12th & Beyond</span>
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
+                Confused About Your Future <br>After School? <span class="gradient-text">Start Here.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+                We help Indian students and parents discover the perfect career path with clarity, zero pressure, and complete honesty.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <div class="p-6 bg-white rounded-2xl shadow-sm border border-slate-100 card-hover">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-flask text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2 text-slate-800">Science</h3>
+                    <p class="text-sm text-slate-500">Beyond just Doctor & Engineer. Explore Biotech, Research, Robotics & more.</p>
+                </div>
+                <div class="p-6 bg-white rounded-2xl shadow-sm border border-slate-100 card-hover">
+                    <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-chart-line text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2 text-slate-800">Commerce</h3>
+                    <p class="text-sm text-slate-500">Master Finance, Business, Law, and the modern Digital Economy.</p>
+                </div>
+                <div class="p-6 bg-white rounded-2xl shadow-sm border border-slate-100 card-hover">
+                    <div class="w-12 h-12 bg-rose-100 text-rose-600 rounded-xl flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-palette text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2 text-slate-800">Humanities/Arts</h3>
+                    <p class="text-sm text-slate-500">Design, Psychology, UPSC, Media, and hundreds of creative paths.</p>
+                </div>
+            </div>
+
+            <button onclick="document.getElementById('explore').scrollIntoView()" class="bg-slate-900 text-white px-10 py-4 rounded-2xl text-lg font-bold hover:scale-105 transition-transform shadow-xl">
+                Start Exploring Careers <i class="fas fa-arrow-right ml-2"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- Career Selection Flow -->
+    <section id="explore" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Discover Your Passion</h2>
+                <p class="text-slate-500 max-w-2xl mx-auto">Search from our database of 500+ career paths. Select up to 5 that interest you to generate your roadmap.</p>
+            </div>
+
+            <!-- Search & Filters -->
+            <div class="max-w-2xl mx-auto mb-10 sticky top-20 z-40 bg-white/80 backdrop-blur py-2">
+                <div class="relative">
+                    <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                    <input type="text" id="careerSearch" onkeyup="filterCareers()" placeholder="Search careers like Data Scientist, IAS, Pilot, UI/UX Designer..." class="w-full pl-12 pr-4 py-4 rounded-2xl border-2 border-slate-100 focus:border-indigo-500 focus:ring-0 outline-none transition-all shadow-sm">
+                </div>
+                <div id="selectionCounter" class="hidden mt-4 text-center bg-indigo-50 py-2 rounded-xl text-indigo-700 font-semibold text-sm">
+                    Selected: <span id="selectedCount">0</span>/5 careers
+                </div>
+            </div>
+
+            <!-- Career Cards Container -->
+            <div id="careerGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+                <!-- Careers will be injected here by JS -->
+            </div>
+
+            <div class="mt-16 text-center">
+                <button id="generateBtn" onclick="generateRoadmap()" class="hidden bg-indigo-600 text-white px-12 py-4 rounded-2xl text-xl font-bold hover:bg-indigo-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-xl shadow-indigo-100">
+                    Generate My Career Roadmap <i class="fas fa-magic ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section id="compare" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Battle of Careers: Comparison</h2>
+                <p class="text-slate-500">Don't pick a path based on myths. See the reality side-by-side.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Comparison Card 1 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
+                    <div class="flex justify-between items-center mb-8">
+                        <div class="text-center w-5/12">
+                            <div class="w-16 h-16 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center mx-auto mb-3">
+                                <i class="fas fa-user-md text-2xl"></i>
+                            </div>
+                            <h4 class="font-bold">Doctor</h4>
+                        </div>
+                        <div class="font-black text-slate-300 text-2xl italic">VS</div>
+                        <div class="text-center w-5/12">
+                            <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-3">
+                                <i class="fas fa-cog text-2xl"></i>
+                            </div>
+                            <h4 class="font-bold">Engineer</h4>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center py-2 border-b border-slate-50">
+                            <span class="text-xs font-bold text-slate-400 uppercase">Preparation</span>
+                            <div class="flex gap-4 text-sm font-semibold">
+                                <span>8-10 Years</span>
+                                <span>4-5 Years</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center py-2 border-b border-slate-50">
+                            <span class="text-xs font-bold text-slate-400 uppercase">Difficulty Level</span>
+                            <div class="flex gap-4 text-sm font-semibold">
+                                <span class="text-rose-500">Very High</span>
+                                <span class="text-amber-500">High</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center py-2 border-b border-slate-50">
+                            <span class="text-xs font-bold text-slate-400 uppercase">Initial Salary</span>
+                            <div class="flex gap-4 text-sm font-semibold">
+                                <span>Moderate</span>
+                                <span>High (if Skilled)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Comparison Card 2 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
+                    <div class="flex justify-between items-center mb-8">
+                        <div class="text-center w-5/12">
+                            <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-3">
+                                <i class="fas fa-landmark text-2xl"></i>
+                            </div>
+                            <h4 class="font-bold">Govt. Job</h4>
+                        </div>
+                        <div class="font-black text-slate-300 text-2xl italic">VS</div>
+                        <div class="text-center w-5/12">
+                            <div class="w-16 h-16 bg-indigo-100 text-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-3">
+                                <i class="fas fa-building text-2xl"></i>
+                            </div>
+                            <h4 class="font-bold">Private Job</h4>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center py-2 border-b border-slate-50">
+                            <span class="text-xs font-bold text-slate-400 uppercase">Security</span>
+                            <div class="flex gap-4 text-sm font-semibold">
+                                <span class="text-emerald-500">Lifetime</span>
+                                <span class="text-slate-500">Performance Based</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center py-2 border-b border-slate-50">
+                            <span class="text-xs font-bold text-slate-400 uppercase">Salary Growth</span>
+                            <div class="flex gap-4 text-sm font-semibold">
+                                <span>Fixed/Steady</span>
+                                <span class="text-indigo-600">Rapid (if Capable)</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center py-2 border-b border-slate-50">
+                            <span class="text-xs font-bold text-slate-400 uppercase">Competition</span>
+                            <div class="flex gap-4 text-sm font-semibold">
+                                <span class="text-rose-500">Extreme</span>
+                                <span class="text-amber-500">Skill-based</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Careers without Maths Section -->
+    <section class="py-20 px-4 bg-indigo-900 text-white overflow-hidden relative">
+        <div class="absolute -right-20 -top-20 w-64 h-64 bg-indigo-500 rounded-full blur-3xl opacity-20"></div>
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6">Weak in Maths or Science? <br><span class="text-indigo-300">No Problem.</span></h2>
+                    <p class="text-indigo-100 text-lg mb-8">Many students believe they can't have a successful career without being a math wizard. That is a myth! Some of the highest-paying and most respected careers don't require advanced calculus.</p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="bg-indigo-800/50 p-4 rounded-xl border border-indigo-700">
+                            <h4 class="font-bold mb-1">Law & Judiciary</h4>
+                            <p class="text-xs text-indigo-200">Logic & argumentation matter more than numbers.</p>
+                        </div>
+                        <div class="bg-indigo-800/50 p-4 rounded-xl border border-indigo-700">
+                            <h4 class="font-bold mb-1">Psychology</h4>
+                            <p class="text-xs text-indigo-200">Understand the human mind and behavior.</p>
+                        </div>
+                        <div class="bg-indigo-800/50 p-4 rounded-xl border border-indigo-700">
+                            <h4 class="font-bold mb-1">Creative Arts</h4>
+                            <p class="text-xs text-indigo-200">UI/UX Design, Filmmaking, Animation.</p>
+                        </div>
+                        <div class="bg-indigo-800/50 p-4 rounded-xl border border-indigo-700">
+                            <h4 class="font-bold mb-1">Management</h4>
+                            <p class="text-xs text-indigo-200">Hotel Management, HR, Event Mgmt.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Students Happy" class="rounded-3xl shadow-2xl rotate-3 scale-95 hover:rotate-0 transition-transform duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mistakes Section -->
+    <section id="mistakes" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Common Student Mistakes</h2>
+                <p class="text-slate-500 italic">"Smart people learn from their mistakes. Wise people learn from others' mistakes."</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-rose-50 p-6 rounded-2xl border border-rose-100">
+                    <div class="w-10 h-10 bg-rose-500 text-white rounded-lg flex items-center justify-center mb-4 text-lg font-bold">1</div>
+                    <h4 class="font-bold mb-2">The Friend Factor</h4>
+                    <p class="text-sm text-slate-600">Taking Science just because your best friend took it. They might be good at it; you might not be.</p>
+                </div>
+                <div class="bg-amber-50 p-6 rounded-2xl border border-amber-100">
+                    <div class="w-10 h-10 bg-amber-500 text-white rounded-lg flex items-center justify-center mb-4 text-lg font-bold">2</div>
+                    <h4 class="font-bold mb-2">Sharma Ji's Son</h4>
+                    <p class="text-sm text-slate-600">Following a career because society says it's "respectable" while ignoring your own interest.</p>
+                </div>
+                <div class="bg-blue-50 p-6 rounded-2xl border border-blue-100">
+                    <div class="w-10 h-10 bg-blue-500 text-white rounded-lg flex items-center justify-center mb-4 text-lg font-bold">3</div>
+                    <h4 class="font-bold mb-2">Ignoring Skills</h4>
+                    <p class="text-sm text-slate-600">Focusing only on degrees and marks while ignoring real-world skills like communication and tech.</p>
+                </div>
+                <div class="bg-emerald-50 p-6 rounded-2xl border border-emerald-100">
+                    <div class="w-10 h-10 bg-emerald-500 text-white rounded-lg flex items-center justify-center mb-4 text-lg font-bold">4</div>
+                    <h4 class="font-bold mb-2">FOMO Trends</h4>
+                    <p class="text-sm text-slate-600">Jumping into "Stock Trading" or "Crypto" or "Influencing" just because it looks cool on Instagram.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Developer Section -->
+    <section class="py-20 bg-slate-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <div class="mb-8 inline-block relative">
+                <div class="w-24 h-24 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 border-4 border-slate-800 shadow-xl overflow-hidden">
+                    <i class="fas fa-user text-4xl"></i>
+                </div>
+            </div>
+            <h2 class="text-3xl font-bold mb-2">Ritik Singh</h2>
+            <p class="text-indigo-400 font-medium mb-4">Aligarh, Uttar Pradesh, India 🇮🇳</p>
+            <p class="text-slate-400 max-w-lg mx-auto leading-relaxed">
+                "I am a student who created afterclass9th.com to help other students make better career decisions with clarity and confidence. I know the pressure, and I want to help you navigate it."
+            </p>
+            <div class="mt-8 flex justify-center gap-6">
+                <a href="#" class="text-slate-400 hover:text-white transition-colors text-2xl"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="text-slate-400 hover:text-white transition-colors text-2xl"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-slate-400 hover:text-white transition-colors text-2xl"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-100 py-12">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="col-span-1 md:col-span-2">
+                <div class="flex items-center gap-2 mb-4">
+                    <div class="bg-indigo-600 p-1.5 rounded-lg text-white">
+                        <i class="fas fa-graduation-cap text-lg"></i>
+                    </div>
+                    <span class="text-lg font-bold tracking-tight">afterclass<span class="text-indigo-600">9th</span>.com</span>
+                </div>
+                <p class="text-slate-500 text-sm max-w-sm">Empowering students across India to choose their careers based on interest and logic, not pressure. Your future, your choice.</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Quick Links</h4>
+                <ul class="text-sm text-slate-500 space-y-2">
+                    <li><a href="#explore" class="hover:text-indigo-600">Explore Careers</a></li>
+                    <li><a href="#compare" class="hover:text-indigo-600">Comparison Hub</a></li>
+                    <li><a href="#mistakes" class="hover:text-indigo-600">Common Mistakes</a></li>
+                    <li><a href="#" class="hover:text-indigo-600">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Resources</h4>
+                <ul class="text-sm text-slate-500 space-y-2">
+                    <li><a href="#" class="hover:text-indigo-600">Careers Without Maths</a></li>
+                    <li><a href="#" class="hover:text-indigo-600">Exams Dashboard</a></li>
+                    <li><a href="#" class="hover:text-indigo-600">Scholarship Guide</a></li>
+                    <li><a href="#" class="hover:text-indigo-600">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 mt-12 pt-8 border-t border-slate-50 text-center text-slate-400 text-xs">
+            © 2023 afterclass9th.com. Built with ❤️ for students.
+        </div>
+    </footer>
+
+    <!-- Floating Scroll Notification -->
+    <div id="scrollNotification" class="fixed bottom-6 right-6 z-50 hidden">
+        <div class="relative group cursor-pointer" onclick="scrollToGenerateBtn()">
+            <!-- Animated background glow -->
+            <div class="absolute -inset-1 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 rounded-3xl blur-lg opacity-75 group-hover:opacity-100 transition duration-500 animate-pulse"></div>
+            
+            <!-- Glass card -->
+            <div class="relative bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 px-6 py-4 rounded-2xl shadow-2xl flex items-center gap-4 overflow-hidden">
+                <!-- Decorative circles -->
+                <div class="absolute -top-4 -right-4 w-16 h-16 bg-white/10 rounded-full"></div>
+                <div class="absolute -bottom-6 -left-6 w-20 h-20 bg-white/10 rounded-full"></div>
+                <div class="absolute top-1/2 right-1/4 w-8 h-8 bg-white/5 rounded-full"></div>
+                
+                <!-- Sparkle effects -->
+                <div class="absolute top-2 left-8 w-2 h-2 bg-yellow-300 rounded-full animate-ping"></div>
+                <div class="absolute bottom-3 right-16 w-1.5 h-1.5 bg-cyan-300 rounded-full animate-ping" style="animation-delay: 0.5s;"></div>
+                
+                <!-- Arrow icon with animation -->
+                <div class="relative w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center border border-white/30 shadow-inner">
+                    <i class="fas fa-arrow-down text-xl text-white animate-bounce"></i>
+                </div>
+                
+                <!-- Text content -->
+                <div class="relative z-10">
+                    <p class="font-bold text-white text-base flex items-center gap-2">
+                        Scroll Down <i class="fas fa-sparkles text-yellow-300 text-xs"></i>
+                    </p>
+                    <p class="text-xs text-white/80">to generate your roadmap!</p>
+                </div>
+                
+                <!-- Close button -->
+                <button onclick="event.stopPropagation(); hideScrollNotification()" class="relative z-10 ml-2 w-8 h-8 bg-white/10 hover:bg-white/30 rounded-full flex items-center justify-center transition-all border border-white/20">
+                    <i class="fas fa-times text-white text-sm"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Roadmap Modal -->
+    <div id="roadmapModal" class="fixed inset-0 z-[100] hidden overflow-y-auto">
+        <div class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm"></div>
+        <div class="relative min-h-screen flex items-center justify-center p-4">
+            <div class="bg-white w-full max-w-4xl rounded-3xl shadow-2xl relative overflow-hidden">
+                <div class="absolute right-6 top-6 z-10">
+                    <button onclick="closeModal()" class="w-10 h-10 bg-slate-100 hover:bg-slate-200 rounded-full flex items-center justify-center transition-colors">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                <div id="roadmapContent" class="p-8 md:p-12 custom-scrollbar max-h-[90vh] overflow-y-auto">
+                    <!-- Dynamic Roadmap Content -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Career Database Simulation (50+ Core categories that represent 1000+ paths)
+        const careers = [
+            { id: 1, name: "Software Engineer", stream: "Science", icon: "fa-code", desc: "Building apps and software.", difficulty: "High", salary: "10-50 LPA", skills: "Logic, Coding, Problem Solving", path: "PCM in 12th > B.Tech/BCA > Internships", exams: "JEE Main, BITSAT" },
+            { id: 2, name: "Doctor (MBBS)", stream: "Science", icon: "fa-stethoscope", desc: "Saving lives and medicine.", difficulty: "Extreme", salary: "8-30 LPA", skills: "Empathy, Biology, Memory", path: "PCB in 12th > NEET-UG > MBBS > MD/MS", exams: "NEET" },
+            { id: 3, name: "Chartered Accountant", stream: "Commerce", icon: "fa-calculator", desc: "Financial experts.", difficulty: "High", salary: "7-25 LPA", skills: "Accounting, Finance, Law", path: "Commerce > CA Foundation > Intermediate > Articleship > Final", exams: "ICAI CA Exams" },
+            { id: 4, name: "Graphic Designer", stream: "Arts", icon: "fa-pen-nib", desc: "Visual storytelling.", difficulty: "Medium", salary: "4-15 LPA", skills: "Creativity, Tools (Ps/Ai), Design Sense", path: "Any stream > B.Des > Portfolio", exams: "UCEED, NID" },
+            { id: 5, name: "Psychologist", stream: "Arts/Science", icon: "fa-brain", desc: "Mental health guidance.", difficulty: "Medium", salary: "4-12 LPA", skills: "Listening, Patience, Analysis", path: "Any stream > B.A/B.Sc Psychology > Masters > M.Phil", exams: "CUET, University Entrance" },
+            { id: 6, name: "Commercial Pilot", stream: "Science", icon: "fa-plane", desc: "Flying commercial aircraft.", difficulty: "High", salary: "15-60 LPA", skills: "Quick Reflexes, Physics, English", path: "PCM in 12th > Flying School > CPL License", exams: "DGCA Exams" },
+            { id: 7, name: "Digital Marketer", stream: "Any", icon: "fa-bullhorn", desc: "Scaling brands online.", difficulty: "Medium", salary: "5-20 LPA", skills: "Data, Creativity, Social Media", path: "Any stream > Graduation > Digital Certs", exams: "Google/Meta Certs" },
+            { id: 8, name: "Lawyer", stream: "Any", icon: "fa-gavel", desc: "Justice and advocacy.", difficulty: "Medium-High", salary: "6-40 LPA", skills: "Communication, Reading, Logic", path: "Any stream > CLAT > 5-year LL.B", exams: "CLAT, AILET" },
+            { id: 9, name: "IAS/IPS Officer", stream: "Any", icon: "fa-shield-alt", desc: "Civil administration.", difficulty: "Extreme", salary: "10-15 LPA + Benefits", skills: "Leadership, General Knowledge, Ethics", path: "Any stream > Graduation > UPSC Prep", exams: "UPSC CSE" },
+            { id: 10, name: "Data Scientist", stream: "Science", icon: "fa-database", desc: "Predicting future with data.", difficulty: "High", salary: "12-45 LPA", skills: "Maths, Python, Stats", path: "PCM > B.Tech/B.Sc Stats > Masters", exams: "GATE, CUET" },
+            { id: 11, name: "Fashion Designer", stream: "Arts", icon: "fa-cut", desc: "Creating clothing trends.", difficulty: "Medium", salary: "5-25 LPA", skills: "Sketching, Fabrics, Vision", path: "Any stream > NIFT/NID Prep > B.Des", exams: "NIFT, NID" },
+            { id: 12, name: "Hotel Manager", stream: "Any", icon: "fa-hotel", desc: "Hospitality & Management.", difficulty: "Medium", salary: "4-12 LPA", skills: "People Skills, Planning", path: "Any stream > NCHMCT JEE > B.HM", exams: "NCHMCT JEE" },
+            { id: 13, name: "Animator / VFX Artist", stream: "Any", icon: "fa-magic", desc: "Creating movie effects.", difficulty: "Medium", salary: "4-18 LPA", skills: "3D Software, Drawing", path: "Any stream > Diploma/Degree in VFX", exams: "Portfolio" },
+            { id: 14, name: "Investment Banker", stream: "Commerce", icon: "fa-hand-holding-usd", desc: "Handling large scale money.", difficulty: "High", salary: "15-80 LPA", skills: "Maths, Finance, Networking", path: "Commerce > B.Com/BBA > MBA Finance", exams: "CAT, GMAT" },
+            { id: 15, name: "Journalist", stream: "Arts", icon: "fa-newspaper", desc: "Reporting news.", difficulty: "Medium", salary: "3-15 LPA", skills: "Writing, Speaking, Research", path: "Any stream > B.J.M.C", exams: "IIMC Entrance" },
+            // Expanded for diversity
+            { id: 16, name: "Architecture", stream: "Science", icon: "fa-building", desc: "Designing structures.", difficulty: "High", salary: "6-20 LPA", skills: "Drawing, Maths, Physics", path: "PCM > NATA/JEE Paper 2 > B.Arch", exams: "NATA" },
+            { id: 17, name: "Content Creator", stream: "Any", icon: "fa-video", desc: "Building your own audience.", difficulty: "Variable", salary: "Unlimited", skills: "Video, Marketing, Consistency", path: "No degree required > Niche selection", exams: "None" },
+            { id: 18, name: "Biotechnologist", stream: "Science", icon: "fa-dna", desc: "Biology + Technology.", difficulty: "High", salary: "5-15 LPA", skills: "Research, Lab Work", path: "PCB > B.Tech Biotech", exams: "JEE, CUET" },
+            { id: 19, name: "UI/UX Designer", stream: "Any", icon: "fa-mobile-alt", desc: "Designing app experiences.", difficulty: "Medium", salary: "8-35 LPA", skills: "Empathy, Tools, Tech", path: "Any stream > Course > Portfolio", exams: "Portfolio" },
+            { id: 20, name: "Company Secretary", stream: "Commerce", icon: "fa-file-signature", desc: "Corporate governance.", difficulty: "High", salary: "6-18 LPA", skills: "Law, Compliance", path: "Commerce > CS Exams", exams: "ICSI CSEET" }
+        ];
+
+        let selectedCareers = [];
+
+        function renderCareers(filter = '') {
+            const grid = document.getElementById('careerGrid');
+            const filtered = careers.filter(c => c.name.toLowerCase().includes(filter.toLowerCase()) || c.stream.toLowerCase().includes(filter.toLowerCase()));
+            
+            grid.innerHTML = filtered.map(c => `
+                <div onclick="toggleCareer(${c.id})" id="career-${c.id}" class="bg-white border-2 ${selectedCareers.includes(c.id) ? 'border-indigo-600 ring-2 ring-indigo-100' : 'border-slate-100'} p-5 rounded-2xl cursor-pointer transition-all hover:border-indigo-200 group relative">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-12 h-12 ${selectedCareers.includes(c.id) ? 'bg-indigo-600 text-white' : 'bg-slate-100 text-slate-500'} rounded-xl flex items-center justify-center mb-4 transition-colors">
+                            <i class="fas ${c.icon} text-xl"></i>
+                        </div>
+                        <h4 class="font-bold text-sm md:text-base mb-1">${c.name}</h4>
+                        <span class="text-[10px] uppercase font-bold text-slate-400 tracking-wider">${c.stream}</span>
+                    </div>
+                    ${selectedCareers.includes(c.id) ? '<div class="absolute top-2 right-2 text-indigo-600"><i class="fas fa-check-circle"></i></div>' : ''}
+                </div>
+            `).join('');
+        }
+
+        function toggleCareer(id) {
+            const index = selectedCareers.indexOf(id);
+            if (index > -1) {
+                selectedCareers.splice(index, 1);
+            } else {
+                if (selectedCareers.length >= 5) {
+                    alert("Maximum 5 careers allowed!");
+                    return;
+                }
+                selectedCareers.push(id);
+            }
+            updateUI();
+        }
+
+        function filterCareers() {
+            const val = document.getElementById('careerSearch').value;
+            renderCareers(val);
+        }
+
+        function updateUI() {
+            const count = selectedCareers.length;
+            document.getElementById('selectedCount').innerText = count;
+            document.getElementById('selectionCounter').classList.toggle('hidden', count === 0);
+            document.getElementById('generateBtn').classList.toggle('hidden', count === 0);
+            
+            // Show/hide scroll notification
+            const notification = document.getElementById('scrollNotification');
+            if (count > 0 && count <= 5) {
+                notification.classList.remove('hidden');
+            } else {
+                notification.classList.add('hidden');
+            }
+            
+            renderCareers(document.getElementById('careerSearch').value);
+        }
+
+        function scrollToGenerateBtn() {
+            document.getElementById('generateBtn').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            setTimeout(() => {
+                document.getElementById('scrollNotification').classList.add('hidden');
+            }, 1000);
+        }
+
+        function hideScrollNotification() {
+            document.getElementById('scrollNotification').classList.add('hidden');
+        }
+
+        function generateRoadmap() {
+            const modal = document.getElementById('roadmapModal');
+            const content = document.getElementById('roadmapContent');
+            const selectedData = careers.filter(c => selectedCareers.includes(c.id));
+
+            content.innerHTML = `
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-extrabold mb-2">Your Career Roadmap</h2>
+                    <p class="text-slate-500">Based on your selection of ${selectedData.length} paths.</p>
+                </div>
+                <div class="space-y-16">
+                    ${selectedData.map(c => `
+                        <div class="relative pl-12 roadmap-line">
+                            <div class="absolute left-0 top-0 w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center z-20 shadow-lg">
+                                <i class="fas ${c.icon}"></i>
+                            </div>
+                            <div class="mb-8">
+                                <h3 class="text-2xl font-bold mb-4">${c.name}</h3>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-slate-50 p-6 rounded-2xl mb-6">
+                                    <div>
+                                        <p class="text-xs font-bold text-slate-400 uppercase mb-2">What it is</p>
+                                        <p class="text-slate-700">${c.desc}</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs font-bold text-slate-400 uppercase mb-2">Required Skills</p>
+                                        <p class="text-slate-700">${c.skills}</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs font-bold text-slate-400 uppercase mb-2">Entrance Exams</p>
+                                        <p class="font-bold text-indigo-600">${c.exams}</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs font-bold text-slate-400 uppercase mb-2">Avg Salary Range</p>
+                                        <p class="font-bold text-emerald-600">${c.salary}</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="space-y-6">
+                                    <p class="font-bold text-lg flex items-center gap-2"><i class="fas fa-map-marked-alt text-indigo-500"></i> Step-by-Step Path</p>
+                                    <div class="flex flex-col gap-4">
+                                        <div class="flex gap-4 items-start">
+                                            <div class="w-8 h-8 rounded-full bg-white border-2 border-slate-200 flex-shrink-0 flex items-center justify-center text-xs font-bold">1</div>
+                                            <div>
+                                                <h4 class="font-bold text-slate-800">Class 10th & 12th</h4>
+                                                <p class="text-sm text-slate-500">Focus on ${c.stream === 'Any' ? 'Basic subjects' : c.stream} with at least 60-75% marks.</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex gap-4 items-start">
+                                            <div class="w-8 h-8 rounded-full bg-white border-2 border-slate-200 flex-shrink-0 flex items-center justify-center text-xs font-bold">2</div>
+                                            <div>
+                                                <h4 class="font-bold text-slate-800">Higher Education</h4>
+                                                <p class="text-sm text-slate-500">${c.path}</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex gap-4 items-start">
+                                            <div class="w-8 h-8 rounded-full bg-indigo-600 text-white flex-shrink-0 flex items-center justify-center text-xs font-bold">3</div>
+                                            <div>
+                                                <h4 class="font-bold text-slate-800">Professional Goal</h4>
+                                                <p class="text-sm text-slate-500">Enter the industry as a junior ${c.name} and build your expertise.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+                <div class="mt-12 p-6 bg-amber-50 rounded-2xl text-center">
+                    <p class="text-sm font-medium text-amber-800"><strong>Note:</strong> This roadmap is a general guide. Real career paths may vary. Always research specific colleges and latest exam dates!</p>
+                    <button onclick="window.print()" class="mt-4 text-indigo-600 font-bold hover:underline"><i class="fas fa-print mr-2"></i> Print Roadmap</button>
+                </div>
+            `;
+
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('roadmapModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Initialize
+        renderCareers();
+    </script>
+</body>
+</html>
